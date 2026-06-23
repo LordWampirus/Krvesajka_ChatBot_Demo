@@ -1,6 +1,6 @@
 **! Tento projekt slouží pouze jako ukázková verze projektu pro prezentaci a bez příslušných tokenů a id nebude fungovat! !**
 
-# ChatBot Demo
+# Krvesajka_ChatBot Demo
 
 Demo projekt chatbota napsaného v TypeScriptu, který propojuje Discord a Twitch.
 Projekt ukazuje základní práci s Discord botem, Twitch chat botem, příkazovým systémem, přeposíláním zpráv mezi platformami, logováním a správou oprávnění.
