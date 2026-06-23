@@ -12,3 +12,16 @@ export interface LogEntry {
     message?: string;
     error?: unknown;
 }
+
+// Links
+
+export interface BridgeLink {
+    twitchChannel: string;
+    discordGuildId: string;
+    discordChannelId: string;
+}
+
+export interface AdminLink {
+    discordGuildId: string;
+    discordChannelId: string;
+}

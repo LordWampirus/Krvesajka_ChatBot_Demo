@@ -6,6 +6,7 @@ import { cooldownService } from "../../services/CooldownService";
 import { Logger } from "../../logger/logger";
 
 import type { TwitchMessageInput } from "../../types/twitch";
+import { sendToDiscord } from "../../core/bridge";
 
 loadTwitchCommands();
 
@@ -14,9 +15,11 @@ const platform = "twitch";
 export function handleTwitchMessage({client, channel, user, message,}: TwitchMessageInput) {
     if(!message) return;
 
-    /*
-
-    */
+    sendToDiscord({
+        twitchChannel: channel,
+        username: user["display-name"] ?? "UNKNOWN_USER",
+        message,
+    });
 
     if(!message.startsWith(prefix)) return;
     console.log(`[${user["display-name"]}]: ${message}`);
